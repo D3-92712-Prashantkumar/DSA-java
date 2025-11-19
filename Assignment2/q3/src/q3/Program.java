@@ -82,7 +82,7 @@ public class Program {
 							System.out.println("Nothing to pop Here :)");
 						break;
 					case 3:
-						int peek = s.peek();
+						int peek = q.peek();
 						if(peek>0)
 							System.out.println("Front : "+peek);
 						else
