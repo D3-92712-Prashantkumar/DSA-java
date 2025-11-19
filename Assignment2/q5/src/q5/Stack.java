@@ -1,4 +1,4 @@
-package q1;
+package q5;
 
 public class Stack {
 	int arr[];
@@ -7,30 +7,31 @@ public class Stack {
 	public Stack(int s) {
 		SIZE = s;
 		arr= new int[SIZE];
-		top = -1;
+		top = SIZE;
+		System.out.println("Stack Initialized with top = SIZE("+s+").");
 	}
 	public void push(int d) {
 		
-		if(top==SIZE-1) {
+		if(top==0) {
 			System.out.println("Stack OverFlow!!"
 					+ "\nData not Added!!\n");
 			return;
 		}
-		top++;
+		top--;
 		arr[top]=d;
 	}
 	public int pop() {
-		if(top==-1) {
+		if(top==SIZE) {
 			System.out.println("Stack UnderFlow!!"
 					+ "\nNo Data to Remove!!\n");
 			return -1;
 		}
 		else {
-			return arr[top--];
+			return arr[top++];
 		}
 	}
 	public int peek() {
-		if(top==-1) {
+		if(top==SIZE) {
 			System.out.println("Stack UnderFlow!!"
 					+ "\nNo Data to Display!!\n");
 			return -1;
@@ -40,3 +41,4 @@ public class Stack {
 		}
 	}
 }
+
