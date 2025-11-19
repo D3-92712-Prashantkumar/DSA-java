@@ -16,7 +16,7 @@ public class List {
 	
 	public void addFirst(int d) {
 		Node nnode = new Node(d);
-		nnode.next = head.next;
+		nnode.next = head;
 		head=nnode;
 	}
 	public int deleteFirst() {
@@ -86,6 +86,6 @@ public class List {
 			System.out.print(" "+trav.data);
 			trav=trav.next;
 		}
-		System.out.print("");
+		System.out.println("");
 	}
 }
